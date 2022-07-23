@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>WMC COVID-19 Result Verification Portal</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+		* {
+			font-family: sans-serif;
+		}
+
+		p1 {
+			font-size: 1em;
+		}
+		.form {
+			display: flex;
+			flex-direction: column;
+			/*margin: 4em 0;*/
+		}
+
+		.cta {
+			background-color: #2196f3;
+			color: white;
+			height: 2.9em;
+			text-align: center;
+			padding: .5em;
+			border-radius: 10px;
+			width: 15em;
+			align-self: center;
+			box-shadow: .1em .1em 5px rgba(0, 0, 0, 0.466);
+			cursor: pointer;
+			text-decoration: none;
+			margin: 1em;
+			padding: auto;
+			border: 0;
+			/* color: rgb(0, 174, 255); */
+		}
+
+		.cta:hover {
+			box-shadow: .2em .2em 10px rgba(0, 0, 0, 0.466);
+		}
+
+
+		.container {
+			display: flex;
+		}
+
+		input {
+			margin: .7em 0;
+			border: 1px solid Grey;
+			border-radius: 40px;
+			width: 19em;
+			padding: .7em .5em .7em 1.5em;
+		}
+		p{
+			font-size: large;
+			font-weight: 510;
+		}
+		.signincont {
+			background-color: white;
+			width: 20em;
+			/*height: 14em;*/
+			margin: 0em auto;
+			border-radius: 10px;
+			padding: 1em;
+			box-shadow: 0em 1em 100px rgba(0, 0, 0, 0.74);
+		}
+		.signincontx {
+			background-color: white;
+			width: 26em;
+			/*height: 14em;*/
+			margin: auto auto;
+			border-radius: 10px;
+			padding: 1em;
+			box-shadow: 0em 1em 100px rgba(0, 0, 0, 0.74);
+		}
+		* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	z-index: 1000;
+}
+
+body {
+	background-color: #005496;
+	position: relative;
+}
+
+.separator,
+.separator-2 {
+	position: relative;
+	width: 100%;
+	border-bottom: 2px dashed #999;
+}
+
+.separator:after,
+.separator-2:after {
+	content: '';
+	position: absolute;
+	width: 1em;
+	height: 1.6em;
+	background-color: #005496;
+	right: -1em;
+	top: -0.8em;
+	border-radius: 1.6em 0 0 1.6em;
+}
+
+.separator:before,
+.separator-2:before {
+	content: '';
+	position: absolute;
+	width: 1em;
+	height: 1.6em;
+	background-color: #005496;
+	left: -1em;
+	top: -0.8em;
+	border-radius: 0 1.6em 1.6em 0;
+}
+
+div > h3 {
+	margin-bottom: 1.2em;
+	text-align: center;
+}
+
+.title {
+	margin: 0.2em 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	color: #FFF;
+	padding: 1.4em;
+	text-align: center;
+
+}
+
+.title p {
+	font-size: 1.6em;
+	/*margin-bottom: 1.6em;*/
+}
+
+
+/*--------------*/
+/*--- navbar ---*/
+/*--------------*/
+.navbar {
+	background-color: rgba(0, 0, 0, 0.3);
+	color: #FFF;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	text-align: center;
+}
+
+.navbar .brand img {
+	width: 6em;
+	border-radius: 0.6em;
+	margin-bottom: 0.8em;
+}
+
+.navbar .brand p {
+	font-size: 1.8em; 
+}
+
+.navbar .brand p.small {
+	font-size: 1.2em; 
+}
+
+/*------------*/
+/*--- form ---*/
+/*------------*/
+.form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFF;
+	border-radius: 0.6em;
+	padding: 0.8em;
+	min-width: 19em;
+	max-width: 24em;
+	margin: 2.8em auto;
+	box-shadow: 0 0 1.8em rgba(0, 0, 0, 0.1);
+}
+
+.form form {
+	width: 100%;
+}
+
+.form p {
+	text-align: center;
+	margin: 0.8em 0;
+}
+
+.form {
+	width: 100%;
+
+}
+
+.form .field-group {
+	margin-bottom: 1.2em;
+
+}
+
+.form .field-group input,
+.form .field-group select {
+	padding: 0.6em 0.4em;
+	width: 100%;
+	outline: none;
+	border: 0.1em solid #888;
+	border-radius: 0.2em;
+}
+
+.form .btn {
+	width: 100%;
+	background-color: #0078D7;
+	border: none;
+	border-radius: 0.2em;
+	padding: 0.8em;
+	margin: 1.2em 0; 
+	color: #FFF;
+	cursor: pointer;
+}
+
+.bill-to {
+	margin-bottom: 2em;
+}
+
+.card {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.total {
+	margin-top: 2em;
+}
+
+.form-group {
+	display: flex;
+	justify-content: space-between;
+}
+
+.form-group div:nth-of-type(1) {
+	width: 25%;
+}
+
+.form-group div:nth-of-type(2) {
+	width: 70%;
+}
+	</style></head>
+	
+
+	<body>
+		<div class="container">
+			<div class="signincontx" style="margin-top: 1em;">
+				<div class="form" style="margin:0;">
+					<img src="resultHeader.jpg" alt="logo" style="width: 100%;">
+				</div>
+				<br>
+				<div class="form" style="margin:0;">
+					<table style="width:100%;">
+						<tbody><tr>
+							<td style="padding: 0 0 0.8em 0;text-align:left;width:130px;">Unique Ref.:</td>
+							<td style="padding: 0 0 0.8em 6px;text-align:left;font-weight:bold;" colspan="2">YAIOFA</td>
+						</tr>
+						<tr>
+							<td style="padding: 0 0 0.8em 0;text-align:left;">Full name:</td>
+							<td style="padding: 0 0 0.8em 6px;text-align:left;font-weight:bold;" colspan="2">Mikiyas Yosef</td>
+						</tr>
+						<tr>
+							<td style="padding: 0 0 0.8em 0;text-align:left;">Citizenship:</td>
+							<td style="padding: 0 0 0.8em 6px;text-align:left;font-weight:bold;" colspan="2">Ethiopian</td>
+						</tr>
+						<tr>
+							<td style="padding: 0 0 0.8em 0;text-align:left;">Passport #:</td>
+							<td style="padding: 0 0 0.8em 6px;text-align:left;font-weight:bold;" colspan="2">911581369</td>
+						</tr>
+						<tr>
+							<td style="padding: 0 0 0.8em 0;text-align:left;">DOB:</td>
+							<td style="padding: 0 0 0.8em 6px;text-align:left;font-weight:bold;" colspan="2">--2003</td>
+						</tr>
+						<tr>
+							<td style="padding: 0 0 0.8em 0;text-align:left;">Sample collection date and time:</td>
+							<td style="padding: 0 0 0.8em 6px;text-align:left;font-weight:bold;" colspan="2">23-JUL-2022 11:18 (GMT+3)</td>
+						</tr>
+						<tr>
+							<td style="padding: 0 0 0.8em 0;text-align:left;" rowspan="3">Test result:</td>
+							<td style="padding: 0 6px 0.8em 6px;text-align:left;font-weight:bold;">
+								PCR:
+							</td>
+							<td style="padding: 0 0 0.8em 0;text-align:left;font-weight:bold;">
+								NEGETIVE
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 0 6px 0.8em 6px;text-align:left;font-weight:bold;">
+								IgM:
+							</td>
+							<td style="padding: 0 0 0.8em 0;text-align:left;font-weight:bold;">
+								N/A
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 0 6px 0.8em 6px;text-align:left;font-weight:bold;width:5em;">
+								Antigen:
+							</td>
+							<td style="padding: 0 0 0.8em 0;text-align:left;font-weight:bold;">
+								N/A
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 1em 6px 1em 6px;font-weight:bold;width:5em;font-size:1.25em;text-align: center;color:green;border:5px solid green;" colspan="3">
+								BOARD WITH THIS TEST RESULT IF TEST RESULT IS VALID AS PER DESTINATION RULES &amp; REGULATIONS
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+				<br>
+			</div>
+		</div>
+		<style>
+			#myImg {
+			  border-radius: 5px;
+			  cursor: pointer;
+			  transition: 0.3s;
+			}
+
+			#myImg:hover {opacity: 0.7;}
+
+			/* The Modal (background) */
+			.modal {
+			  display: none; /* Hidden by default */
+			  position: fixed; /* Stay in place */
+			  z-index: 1000; /* Sit on top */
+			  padding-top: 10px; /* Location of the box */
+			  left: 0;
+			  top: 0;
+			  width: 100%; /* Full width */
+			  height: 100%; /* Full height */
+			  overflow: auto; /* Enable scroll if needed */
+			  background-color: rgb(0,0,0); /* Fallback color */
+			  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+			}
+
+			/* Modal Content (Image) */
+			.modal-content {
+			  margin: auto;
+			  display: block;
+			  /*width: 80%;
+			  max-width: 700px;*/
+			}
+
+			/* Caption of Modal Image (Image Text) - Same Width as the Image */
+			#caption {
+			  margin: auto;
+			  display: block;
+			  width: 80%;
+			  /*max-width: 700px;*/
+			  text-align: center;
+			  color: #ccc;
+			  padding: 10px 0;
+			  height: 50px;
+			}
+
+			/* Add Animation - Zoom in the Modal */
+			.modal-content, #caption {
+			  animation-name: zoom;
+			  animation-duration: 0.6s;
+			}
+
+			@keyframes zoom {
+			  from {transform:scale(0)}
+			  to {transform:scale(1)}
+			}
+
+			/* The Close Button */
+			.close {
+			  position: absolute;
+			  top: 15px;
+			  right: 35px;
+			  color: #f1f1f1;
+			  font-size: 40px;
+			  font-weight: bold;
+			  transition: 0.3s;
+			}
+
+			.close:hover,
+			.close:focus {
+			  color: #bbb;
+			  text-decoration: none;
+			  cursor: pointer;
+			}
+
+			/* 100% Image Width on Smaller Screens */
+			@media only screen and (max-width: 700px){
+			  .modal-content {
+				width: 100%;
+			  }
+			}
+		</style>
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal" style="display: none;">
+
+		  <!-- The Close Button -->
+		  <span class="close">×</span>
+
+		  <!-- Modal Content (The Image) -->
+		  <img class="modal-content" src="">
+
+		  <!-- Modal Caption (Image Text) -->
+		  <div id="caption">FULL CERTIFICATE</div>
+		</div>
+		<script>
+			var modal = document.getElementById("myModal");
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById("myImg");
+			
+			var captionText = document.getElementById("caption");
+			img.onclick = function(){
+			  modal.style.display = "block";
+			  captionText.innerHTML = "FULL CERTIFICATE";
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+		</script>
+	
+
+
+</body></html>
